@@ -1,0 +1,45 @@
+@import 'mixins';
+.CartItem {
+    @include grid(repeat(20,5%),repeat(10,10%));
+    border: solid 1px black;
+    border-radius: 10px;
+    .CartTitle{
+        @include flex(center,center);
+        text-align: center;
+        font-size: 0.9rem;
+        grid-area: 1 / 6 / span 5 / span 15;
+    }
+    .CartImage{
+        @include flex(center,center);
+        @include widthAndHeight(100%,100%);
+        object-fit: contain;
+        grid-area: 2 / 2 / span 6 / span 4;
+    }
+    .CartPrice{
+        @include flex(center,center);
+        font-size: 1.2rem;
+        grid-area: 6 / 16 / span 2 / span 4;
+    }
+    .CartQuantity{
+        @include flex(center,center);
+        grid-area: 6 / 10 / span 2 / span 2;
+    }
+    .Subtotal{
+        @include flex(center,center);
+        font-size: 1.3rem;
+        font-weight: bold;
+        grid-area: 9 / 16 / span 2 / span 4;
+    }
+    .MinusOne{
+        @include flex(center,center);
+        grid-area: 6 / 8 / span 2 / span 2;
+    }
+    .PlusOne{
+        @include flex(center,center);
+        grid-area: 6 / 12 / span 2 / span 2;
+    }
+    .Remove{
+        @include flex(center,center);
+        grid-area: 9 / 2 / span 2 / span 4;
+    }
+}

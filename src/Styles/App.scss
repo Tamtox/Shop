@@ -1,0 +1,86 @@
+@import 'mixins';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    .App {
+        @include widthAndHeight(100vw,100vh);
+        background: radial-gradient(circle, rgb(50, 245, 229) 0%, rgb(12, 69, 224) 100%);
+        padding: 0 0 1% 0;
+        .Inputs{
+            @include widthAndHeight(90%,10%);
+            @include flex(center,center);
+            margin: auto;
+            .Search{
+                @include widthAndHeight(30%,60%);
+            }
+            .ToggleCart{
+                @include widthAndHeight(10%,60%);
+                font-size: 1.2rem
+            }
+        }
+        .Shop{
+            @include widthAndHeight(90%,90%);
+            display: grid;
+            margin: auto;
+            padding: 2% 2% 2% 2%;
+            grid-template-columns: repeat(3,30%);
+            grid-auto-rows: 80%;
+            justify-content: space-around;
+            align-items: center;
+            gap: 3%;
+            border: solid 1px black;
+            border-radius: 10px;
+            overflow: scroll;
+            overflow-x: hidden;
+            background-color: rgb(255, 255, 255);
+        }
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        .Cart{
+            @include widthAndHeight(30%,90vh);
+            animation: 0.5s ease-in-out 0s 1 slideInFromLeft;
+            padding: 1% 0 0 1%;
+            position: fixed;
+            bottom: 5%;
+            right: 0;
+            overflow: scroll;
+            scrollbar-width: none;
+            background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgb(39, 175, 180) 100%);
+            border-radius: 10px 0 0 10px;
+            .CartItems{
+                @include widthAndHeight(100%,90%);
+                background-color: white;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-auto-rows: 30%;
+                overflow: scroll;
+                scrollbar-width: none;
+                border-radius: 10px;
+            }
+            .Checkout{
+                @include widthAndHeight(90%,10%);
+                @include flex(flex-end,center);
+                margin: auto;
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+        }
+        .button{
+            transition: transform 0.8s;
+        }
+        .button:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 10px black;
+        }
+    }
+}
+
+
+@import 'media-queries';

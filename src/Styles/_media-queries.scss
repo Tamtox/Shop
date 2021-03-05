@@ -1,0 +1,186 @@
+@import 'mixins';
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+    *{
+        .App{
+            .Inputs{
+                .Search{
+                    width: 80%;
+                }
+                .ToggleCart{
+                    width: 20%;
+                }
+            }
+            .Shop{
+                grid-template-columns: 90%;
+            }
+            .Cart {
+                width: 95%;
+                bottom: 1%;
+            }
+        }
+    }
+    .CartItem{
+        .CartPrice{
+            font-size: 0.95rem;
+            transform: translateX(-5px);
+        }
+    }
+    .DetailedShopItem{
+        .DetailedShopImage{
+            @include widthAndHeight(100%,100%);
+            object-fit: contain;
+            grid-area: 6 / 1 / span 5 / span 20;
+        }
+        .DetailedShopTitle{
+            font-size: 1.1rem;
+            grid-area: 1 / 1 / span 4 / span 20;
+        }
+        .DetailedShopDescription{
+            font-size: 0.9rem;
+            grid-area: 12  / 1 / span 5 / span 20;
+        }
+        .DetailedShopPrice{
+            font-size: 1.2rem;
+            grid-area: 18  / 1 / span 2 / span 10 ;
+        }
+        .DetailedShopQuantity{
+            font-size: 1.2rem;
+            grid-area: 18  / 11 / span 2 / span 10 ;
+        }
+        .AddToCart{
+            font-size: 1.3rem;
+            grid-area: 19  / 11 / span 2 / span 10 ;
+        }
+        .ToggleDetailed{
+            font-size: 1.3rem;
+            grid-area: 19  / 1 / span 2 / span 10 ;
+        }
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    *{
+        .App{
+            .Inputs{
+                .Search{
+                    width: 80%;
+                }
+                .ToggleCart{
+                    width: 20%;
+                }
+            }
+            .Shop{
+                grid-template-columns: 90%;
+            }
+            .Cart {
+                width: 60%;
+                bottom: 1%;
+            }
+        }
+    }
+    .CartItem{
+        .CartPrice{
+            font-size: 0.95rem;
+            transform: translateX(-5px);
+        }
+    }
+    .DetailedShopItem{
+        .DetailedShopImage{
+            @include widthAndHeight(100%,100%);
+            object-fit: contain;
+            grid-area: 6 / 1 / span 5 / span 20;
+        }
+        .DetailedShopTitle{
+            font-size: 1.1rem;
+            grid-area: 1 / 1 / span 4 / span 20;
+        }
+        .DetailedShopDescription{
+            font-size: 0.9rem;
+            grid-area: 12  / 1 / span 5 / span 20;
+        }
+        .DetailedShopPrice{
+            font-size: 1.2rem;
+            grid-area: 18  / 1 / span 2 / span 10 ;
+        }
+        .DetailedShopQuantity{
+            font-size: 1.2rem;
+            grid-area: 18  / 11 / span 2 / span 10 ;
+        }
+        .AddToCart{
+            font-size: 1.3rem;
+            grid-area: 19  / 11 / span 2 / span 10 ;
+        }
+        .ToggleDetailed{
+            font-size: 1.3rem;
+            grid-area: 19  / 1 / span 2 / span 10 ;
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    *{
+        .App{
+            .Inputs{
+                .Search{
+                    width: 60%;
+                }
+                .ToggleCart{
+                    width: 20%;
+                }
+            }
+            .Shop{
+                grid-template-columns: 45% 45%;
+            }
+            .Cart {
+                width: 50%;
+                bottom: 1%;
+            }
+        }
+    }
+    .CartItem{
+        .CartPrice{
+            font-size: 0.95rem;
+            transform: translateX(-5px);
+        }
+    }
+    .DetailedShopItem{
+        .DetailedShopImage{
+            @include widthAndHeight(100%,100%);
+            object-fit: contain;
+            grid-area: 6 / 1 / span 5 / span 20;
+        }
+        .DetailedShopTitle{
+            font-size: 1.1rem;
+            grid-area: 1 / 1 / span 4 / span 20;
+        }
+        .DetailedShopDescription{
+            font-size: 0.9rem;
+            grid-area: 12  / 1 / span 5 / span 20;
+        }
+        .DetailedShopPrice{
+            font-size: 1.2rem;
+            grid-area: 18  / 1 / span 2 / span 10 ;
+        }
+        .DetailedShopQuantity{
+            font-size: 1.2rem;
+            grid-area: 18  / 11 / span 2 / span 10 ;
+        }
+        .AddToCart{
+            font-size: 1.3rem;
+            grid-area: 19  / 11 / span 2 / span 10 ;
+        }
+        .ToggleDetailed{
+            font-size: 1.3rem;
+            grid-area: 19  / 1 / span 2 / span 10 ;
+        }
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    *{
+        .App{
+            .Cart {
+                width: 50%;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+}
