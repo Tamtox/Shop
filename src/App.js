@@ -199,7 +199,7 @@ class App extends React.Component{
       <div className="App">
         <div className='Inputs'>
           <input type="text" className="Search" value={this.state.input} onChange={this.search}/>
-          <button className="ToggleCart button" onClick={this.toggleCart}><FontAwesomeIcon icon={faShoppingCartyarn } /></button>
+          <button className="ToggleCart button" onClick={this.toggleCart}><FontAwesomeIcon icon={faShoppingCart} /></button>
         </div>
         {shop}
         {cart}
@@ -209,5 +209,3 @@ class App extends React.Component{
 }
 
 export default App;
-console.log(name);
-var name = 'Dan'
