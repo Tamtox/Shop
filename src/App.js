@@ -20,10 +20,11 @@ class App extends React.Component{
     }
   }
   componentDidMount() {
-    axios.get("https://fakestoreapi.com/products")
+    axios.get("https://fakestoreapi.herokuapp.com/products")
       .then(res => {
           const shopItems = res.data;
           for(let item of shopItems) {
+            item.image=item.image.replace('https://fakestoreapi.com/', 'https://fakestoreapi.herokuapp.com/');
             let quantity = Math.floor(Math.random() * 99);
             item.quantity = quantity;
             delete item.category
@@ -199,7 +200,7 @@ class App extends React.Component{
       <div className="App">
         <div className='Inputs'>
           <input type="text" className="Search" value={this.state.input} onChange={this.search}/>
-          <button className="ToggleCart button" onClick={this.toggleCart}><FontAwesomeIcon icon={faShoppingCart} /></button>
+          <button className="ToggleCart button" onClick={this.toggleCart}><FontAwesomeIcon icon={faShoppingCart} />{this.state.cartItems.length>=1?this.state.cartItems.length:null}</button>
         </div>
         {shop}
         {cart}

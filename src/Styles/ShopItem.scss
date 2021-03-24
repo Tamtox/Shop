@@ -3,18 +3,17 @@
     @include grid(repeat(10,10%),repeat(20,5%));
     @include widthAndHeight(100%,100%);
     text-align: center;
-    border: 1px grey solid;
     border-radius: 10px;
     .ShopImage{
         @include widthAndHeight(100%,100%);
-        grid-area: 5 / 2 / span 13 / span 8;
+        grid-area: 5 / 2 / span 12 / span 8;
         object-fit: contain;
         border-radius: 10px;
     }
     .ShopTitle{ 
         @include flex(center,center);   
         font-weight: bold;
-        background-color: honeydew;
+        background-color: rgb(137, 224, 251);
         border-radius: 10px 10px 0 0;
         grid-area: 1 / 1 / span 4 / span 10;
     }
@@ -26,11 +25,11 @@
     .AddToCart{
         @include flex(center,center);
         grid-area: 19 / 8 / span 2 / span 3;
-        border-radius: 10px
+        border-radius: 10px;
     }
     .Detailed{
         @include flex(center,center);
         grid-area: 19 / 1 / span 2 / span 3;
-        border-radius: 10px
+        border-radius: 10px;
     }
 }
