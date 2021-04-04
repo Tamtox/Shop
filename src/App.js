@@ -20,11 +20,10 @@ class App extends React.Component{
     }
   }
   componentDidMount() {
-    axios.get("https://fakestoreapi.herokuapp.com/products")
+    axios.get("https://fakestoreapi.com/products/")
       .then(res => {
           const shopItems = res.data;
           for(let item of shopItems) {
-            item.image=item.image.replace('https://fakestoreapi.com/', 'https://fakestoreapi.herokuapp.com/');
             let quantity = Math.floor(Math.random() * 99);
             item.quantity = quantity;
             delete item.category
